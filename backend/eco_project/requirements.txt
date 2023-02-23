@@ -20,7 +20,6 @@ executing==1.2.0
 gunicorn==20.1.0
 h11==0.14.0
 idna==3.4
-ipython==8.10.0
 jedi==0.18.2
 lxml==4.9.2
 matplotlib-inline==0.1.6
