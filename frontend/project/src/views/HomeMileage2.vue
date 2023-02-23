@@ -105,7 +105,7 @@ export default {
     console.log("HomeMileage userPk: " + userPk);
     const that = this;
     axios
-      .get("http://127.0.0.1:8000/member/" + userPk + "/")
+      .get("http://127.0.0.1:8000/api/member/" + userPk + "/")
       .then((response) => {
         console.log("HomeMileage response? ");
         console.log(response);

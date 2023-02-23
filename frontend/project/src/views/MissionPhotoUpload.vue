@@ -56,7 +56,7 @@ export default {
       this.url = URL.createObjectURL(file);
     },
     getMissionInfo(missionId) {
-      const url = 'http://127.0.0.1:8000/mission/';
+      const url = 'http://127.0.0.1:8000/api/mission/';
       const that = this;
       axios.get(url + missionId + '/').
         then(response => {
@@ -74,7 +74,7 @@ export default {
       const frm = new FormData();
       frm.append('mission', Number(missionId));
 
-      axios.post('http://127.0.0.1:8000/mission/complete/', {
+      axios.post('http://127.0.0.1:8000/api/mission/complete/', {
           mission: Number(missionId)
         },
         {
@@ -93,7 +93,7 @@ export default {
       });
 
 
-      axios.post('http://127.0.0.1:8000/mileage/', {
+      axios.post('http://127.0.0.1:8000/api/mileage/', {
         user: that.$cookies.get('userPk'),
         activity: '미션(' + that.missionType[missionId] + ')',
         mileage: 10,
