@@ -98,7 +98,7 @@ export default {
       const accessToken = this.$cookies.get('accessToken');
       console.log('userPk: ' + userPk);
       console.log('accessToken: ' + accessToken);
-      axios.post('http://127.0.0.1:8000/api/mileage/', {
+      axios.post('http://34.64.235.73/api/mileage/', {
           user: userPk,
           activity: activity,
           mileage: mileage,

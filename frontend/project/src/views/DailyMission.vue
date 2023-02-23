@@ -51,7 +51,7 @@ export default {
     checkMissionState() {
       const that = this;
       const accessToken = this.$cookies.get('accessToken');
-      axios.get('http://127.0.0.1:8000/api/mission/complete/', {
+      axios.get('http://34.64.235.73/api/mission/complete/', {
         headers: {
           Authorization: 'JWT ' + accessToken,
         },

@@ -49,7 +49,7 @@
         const username = this.$refs.username.value;
         const password = this.$refs.password.value;
         const that = this;
-        axios.post('http://127.0.0.1:8000/api/member/register/', {
+        axios.post('http://34.64.235.73/api/member/register/', {
           username: username,          
           password: password,
         }).then(response => {
@@ -58,7 +58,7 @@
             //alert('회원가입이 완료되었습니다.');
             that.modalMessage = '회원가입이 완료되었습니다.'
             that.showModal = true;
-            axios.get('http://127.0.0.1:8000/api/member/')
+            axios.get('http://34.64.235.73/api/member/')
               .then(response => {
                 console.log('회원가입 페이지 - 유저 전체 조회')
                 console.log(response);

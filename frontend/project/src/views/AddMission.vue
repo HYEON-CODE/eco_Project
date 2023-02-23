@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     addMission(missionNum) {
-      const url = 'http://127.0.0.1:8000/api/mission/';
+      const url = 'http://34.64.235.73/api/mission/';
       const accessToken = this.$cookies.get('accessToken');
 
       const target = this.missionList[missionNum];

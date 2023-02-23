@@ -48,7 +48,7 @@ export default {
     getHistory() {
       const accessToken = this.$cookies.get('accessToken');
       const that = this;
-      axios.get('http://127.0.0.1:8000/api/mileage/', {
+      axios.get('http://34.64.235.73/api/mileage/', {
         headers: {
           Authorization: 'JWT ' + accessToken,
         }
@@ -65,7 +65,7 @@ export default {
     const userPk = this.$cookies.get('userPk');
     console.log('MileageHistory userPk check: ' + userPk);
     const that = this;
-    axios.get('http://127.0.0.1:8000/api/member/' + userPk + '/')
+    axios.get('http://34.64.235.73/api/member/' + userPk + '/')
       .then(response => {
         console.log('MileageHistory 에서 username과 total마일리지를 조회');
         console.log(response);

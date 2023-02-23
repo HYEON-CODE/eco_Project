@@ -108,7 +108,7 @@ export default {
     },
     checkCurrentPrice(stockName) {
       const that = this;
-      axios.get('http://127.0.0.1:8000/api/stock?text=' + stockName)
+      axios.get('http://34.64.235.73/api/stock?text=' + stockName)
         .then(response => {
           console.log(response);
           that.stockprice = response.data.current_price;
@@ -120,7 +120,7 @@ export default {
     },
     getUserInfo() {
       const that = this;
-      axios.get('http://127.0.0.1:8000/api/member/' + this.$cookies.get('userPk') + '/')
+      axios.get('http://34.64.235.73/api/member/' + this.$cookies.get('userPk') + '/')
         .then(response => {
           that.username = response.data.username;
           that.accountnumber = response.data.account;
@@ -137,7 +137,7 @@ export default {
       this.showConfirmModal = false;
       const that = this;
       const accessToken = this.$cookies.get('accessToken');
-      axios.post('http://127.0.0.1:8000/api/mileage/', {
+      axios.post('http://34.64.235.73/api/mileage/', {
         user: that.$cookies.get('userPk'),
         activity: 'RE100매수',
         mileage: that.calculateMileage,

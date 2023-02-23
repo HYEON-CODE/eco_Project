@@ -44,7 +44,7 @@ export default {
   methods: {
     buy(id) {
       const that = this;
-      let url = 'http://127.0.0.1:8000/api/member/' + this.$cookies.get('userPk') + '/'
+      let url = 'http://34.64.235.73/api/member/' + this.$cookies.get('userPk') + '/'
       axios.get(url)
         .then(response => {
           console.log(response);
@@ -79,7 +79,7 @@ export default {
         price = -30000
       }
 
-      axios.post('http://127.0.0.1:8000/api/mileage/', {
+      axios.post('http://34.64.235.73/api/mileage/', {
         user: that.$cookies.get('userPk'),
         activity: '투자상품권',
         mileage: price,
