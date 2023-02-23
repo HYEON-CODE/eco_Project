@@ -44,11 +44,12 @@ export default {
   },
   methods: {
     login() {
+      
       const username = this.$refs.username.value;
       const password = this.$refs.password.value;
       const that = this;
 
-      axios.post('http://34.64.235.730/api/member/login/', {
+      axios.post('http://34.64.235.73/api/member/login/', {
         username: username,
         password: password,
       }).then(response => {
