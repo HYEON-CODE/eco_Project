@@ -47,7 +47,7 @@ export default {
   created() {
     // backend에서 크롤링한 re100 기업 리스트 받아오기
     const that = this;
-    axios.get('http://127.0.0.1:8000/api/news/inner_text/')
+    axios.get('http://34.64.235.73/api/news/inner_text/')
       .then(response => {
         console.log('re100 list response.data')
         console.log(response.data)
