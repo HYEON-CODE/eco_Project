@@ -75,7 +75,7 @@ export default {
   },
   created() {
     const that = this;
-    axios.get('http://127.0.0.1:8000/news/')
+    axios.get('http://127.0.0.1:8000/api/news/')
       .then(response => {
         console.log('뉴스 리스트 받아온 거');
         console.log(response.data);
