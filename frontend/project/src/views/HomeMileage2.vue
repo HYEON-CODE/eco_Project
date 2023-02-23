@@ -105,7 +105,7 @@ export default {
     console.log("HomeMileage userPk: " + userPk);
     const that = this;
     axios
-      .get("http://34.64.235.730/api/member/" + userPk + "/")
+      .get("http://34.64.235.73/api/member/" + userPk + "/")
       .then((response) => {
         console.log("HomeMileage response? ");
         console.log(response);
