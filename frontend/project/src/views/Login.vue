@@ -48,7 +48,7 @@ export default {
       const password = this.$refs.password.value;
       const that = this;
 
-      axios.post('http://127.0.0.1:8000/member/login/', {
+      axios.post('http://127.0.0.1:8000/api/member/login/', {
         username: username,
         password: password,
       }).then(response => {
@@ -62,7 +62,7 @@ export default {
           console.log(this.$cookies.isKey('accessToken'));
 
           // 회원가입부터 진행하면 아래 코드를 실행 안 해도 상관 없으나, 로그인 부터 진행할경우 아래 코드 필요.
-          axios.get('http://127.0.0.1:8000/member/')
+          axios.get('http://127.0.0.1:8000/api/member/')
               .then(response => {
                 console.log(response);
                 response.data.forEach(member => {
