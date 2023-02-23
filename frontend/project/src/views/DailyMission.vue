@@ -6,20 +6,20 @@
     </div>
     <div class="images">
       <div style="text-align: center;">
-        <img class="done" v-if="doneList.indexOf(1) >= 0" src="../assets/dailymission/tumbler-done.png">
-        <img class="undone" @click="doMission(1)" v-else src="../assets/dailymission/tumbler-undone.png">
+        <img class="done" v-if="doneList.indexOf(3) >= 0" src="../assets/dailymission/tumbler-done.png">
+        <img class="undone" @click="doMission(3)" v-else src="../assets/dailymission/tumbler-undone.png">
       </div>
       <div style="text-align: center;">
-        <img class="done" v-if="doneList.indexOf(2) >= 0" src="../assets/dailymission/recycle-done.png">
-        <img class="undone" @click="doMission(2)" v-else src="../assets/dailymission/recycle-undone.png">
+        <img class="done" v-if="doneList.indexOf(1) >= 0" src="../assets/dailymission/recycle-done.png">
+        <img class="undone" @click="doMission(1)" v-else src="../assets/dailymission/recycle-undone.png">
       </div>
       <div style="text-align: center;">
-        <img class="done" v-if="doneList.indexOf(3) >= 0" src="../assets/dailymission/bus-done.png">
-        <img class="undone" @click="doMission(3)" v-else src="../assets/dailymission/bus-undone.png">
+        <img class="done" v-if="doneList.indexOf(4) >= 0" src="../assets/dailymission/bus-done.png">
+        <img class="undone" @click="doMission(4)" v-else src="../assets/dailymission/bus-undone.png">
       </div>
       <div style="text-align: center;">
-        <img class="done" v-if="doneList.indexOf(4) >= 0" src="../assets/dailymission/shopping-done.png">
-        <img class="undone" @click="doMission(4)" v-else src="../assets/dailymission/shopping-undone.png">
+        <img class="done" v-if="doneList.indexOf(2) >= 0" src="../assets/dailymission/shopping-done.png">
+        <img class="undone" @click="doMission(2)" v-else src="../assets/dailymission/shopping-undone.png">
       </div>
     </div>
   </div>

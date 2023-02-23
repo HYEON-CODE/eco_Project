@@ -43,10 +43,10 @@ export default {
       missionTitle: null,
       missionDescription: null,
       missionType: {
-      1: '텀블러',
-      2: '분리수거',
-      3: '대중교통',
-      4: '장바구니',
+      1: '분리수거',
+      2: '장바구니',
+      3: '텀블러',
+      4: '대중교통',
       },
     };
   },
