@@ -3,8 +3,6 @@ from rest_framework.response import Response
 from rest_framework import status
 import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 # RE100 사이트를 GET
 class InnerTextView(APIView):
@@ -25,15 +23,12 @@ class InnerTextView(APIView):
 # 최신 뉴스를 GET
 class NewsView(APIView):
     def get(self, request):
-  
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
         url = "https://www.sedaily.com/Cube/CubeCollect/249"
 
-        driver = webdriver.Chrome(options=options)  # Change this to the path of your chromedriver executable
-        driver.get(url)
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        driver.quit()
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+        response = requests.get(url, headers=headers)
+        soup = BeautifulSoup(response.content, 'html.parser')
 
         collect_list = soup.select('#collectList > ul > li')[:10]
 
